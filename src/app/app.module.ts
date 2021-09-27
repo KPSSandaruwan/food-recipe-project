@@ -14,8 +14,9 @@ import { RecipesRoutingModule } from './main/recipes/recipes-routing.module';
 import { ShoppingListModule } from './main/shopping-list/shopping-list.module';
 import { LoadingSpinnerComponent } from './common/loading-spinner/loading-spinner.component';
 import { AlertComponent } from './common/alert/alert.component';
-import { DropdownDirective } from './utils/dropdown.directive';
 import { UtilsModule } from './utils/utils.module';
+import { StoreModule } from '@ngrx/store';
+import { shoppingListReducer } from './main/shopping-list/store/shopping-list.reducer';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { UtilsModule } from './utils/utils.module';
     RecipesModule,
     RecipesRoutingModule,
     ShoppingListModule,
-    UtilsModule
+    UtilsModule,
+    StoreModule.forRoot({shoppingList: shoppingListReducer})
   ],
   providers: [
     {

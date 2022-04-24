@@ -114,6 +114,7 @@
   },
   "defaultProject": "Food-recipe-project",
   "cli": {
+    "analytics": false,
     "defaultCollection": "@angular-eslint/schematics"
   }
 }
